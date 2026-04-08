@@ -1,5 +1,5 @@
 # SharePoint/OneDrive SharingLink Audit/Removal Script
-Benjamin Barshaw <benjamin.barshaw@ode.oregon.gov> - IT Operations & Support Network Team Lead - Oregon Department of Education
+Benjamin Barshaw \<benjamin.barshaw@ode.oregon.gov\> - IT Operations & Support Network Team Lead - Oregon Department of Education
 
 Requirements: 
 * PnP PowerShell Module (https://pnp.github.io/powershell/index.html)

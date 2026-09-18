@@ -170,7 +170,7 @@ function removePnPSharingLinks($pnpListItems, $exclusionListHashtable)
                 }
                 # There is no DateAccessed without a Unified Audit Log entry of accessing (as opposed to SharingLinks we are keeping) so we set it as N/A
                 $pnpSharingLinkObject.DateAccessed = "N/A"
-                $pnpSharingLinkObject.SharingLinkURL = $getPnPFileharingLink.Link.WebUrl
+                $pnpSharingLinkObject.SharingLinkURL = $getPnPFileSharingLink.Link.WebUrl
                 $pnpSharingLinkObject.SharingLinkId = $getPnPFileSharingLink.Id
 
                 Write-Host -ForegroundColor Magenta "Found SharingLink! " -NoNewline
@@ -210,8 +210,8 @@ function removePnPSharingLinks($pnpListItems, $exclusionListHashtable)
                 $pnpSharingLinkObject.Object = $listItem.FieldValues.FileLeafRef
                 $pnpSharingLinkObject.ObjectType = $listItem.FileSystemObjectType
                 $tempArray = @()
-                $tempArray += $getPnPFileSharingLink.GrantedToIdentitiesV2.SiteUser.Email
-                $tempArray += $getPnPFileSharingLink.GrantedToIdentitiesV2.User.Email
+                $tempArray += $getPnPFolderSharingLink.GrantedToIdentitiesV2.SiteUser.Email
+                $tempArray += $getPnPFolderSharingLink.GrantedToIdentitiesV2.User.Email
                 If ($tempArray -eq $null)
                 {
                     $pnpSharingLinkObject.UserAccessing = "N/A"                    
